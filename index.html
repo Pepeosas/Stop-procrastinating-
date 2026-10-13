@@ -1,294 +1,1049 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Discipline Blueprint</title>
-  <meta name="description" content="A practical guide to building self-discipline, overcoming procrastination, and taking consistent action.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * { box-sizing: border-box; }
-    
-    body {
-      
-      <div id="loading-screen">
-  <div class="loader"></div>
-  <h2>Please wait...</h2>
-  <p>Your Discipline Blueprint is getting ready.</p>
-  <p>Preparing your experience</p>
-  <div class="countdown">
-    <span id="countdown">20</span> seconds
-  </div>
-</div>
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #18213a;
-      background: #f5f7ff;
-      line-height: 1.6;
-    }
+<title>The Discipline Blueprint | Take Back Control</title>
 
-    .ad-slot {
-      width: 100%;
-      min-height: 90px;
-      padding: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #fff;
-      border-bottom: 1px solid #e4e8f3;
-      text-align: center;
-      color: #7a8298;
-      font-size: 12px;
-    }
+<meta name="description"
+content="Stop procrastinating and build lasting self-discipline with The Discipline Blueprint, a practical 30-day guide to building better habits and taking consistent action.">
 
-    .ad-slot.bottom {
-      border-top: 1px solid #e4e8f3;
-      border-bottom: 0;
-      margin-top: 28px;
-    }
+<meta name="theme-color" content="#10172c">
 
-    .container {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 38px 20px;
-    }
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    .hero {
-      text-align: center;
-      background: linear-gradient(135deg, #18213a, #3b4fc4);
-      color: white;
-      border-radius: 22px;
-      padding: 38px 24px;
-      box-shadow: 0 16px 40px rgba(33, 49, 117, .16);
-    }
+:root {
+  --navy: #10172c;
+  --navy-light: #202e50;
+  --gold: #ffd166;
+  --gold-dark: #e7ad36;
+  --cream: #fffaf0;
+  --text: #19243a;
+  --muted: #667085;
+  --green: #197653;
+}
 
-    .badge {
-      display: inline-block;
-      background: #ffdc82;
-      color: #252b45;
-      border-radius: 999px;
-      padding: 5px 12px;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    h1 {
-      font-size: clamp(30px, 6vw, 48px);
-      line-height: 1.12;
-      margin: 18px 0 14px;
-    }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: var(--text);
+  line-height: 1.65;
+}
 
-    .hero p {
-      max-width: 560px;
-      margin: 0 auto;
-      color: #e9ecff;
-      font-size: 17px;
-    }
+a {
+  -webkit-tap-highlight-color: transparent;
+}
 
-    .cover {
-      width: 150px;
-      margin: 26px auto 22px;
-      padding: 22px 13px;
-      border-radius: 9px;
-      background: linear-gradient(145deg, #ffdc82, #ffad68);
-      color: #18213a;
-      box-shadow: 8px 10px 0 rgba(0,0,0,.15);
-      transform: rotate(-3deg);
-    }
+/* ADVERTISEMENT AREAS */
 
-    .cover small {
-      display: block;
-      font-size: 10px;
-      letter-spacing: .12em;
-    }
+.ad-slot {
+  width: 100%;
+  min-height: 90px;
+  padding: 12px 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  overflow: hidden;
+  text-align: center;
+}
 
-    .cover strong {
-      display: block;
-      font-size: 21px;
-      line-height: 1.1;
-      margin: 10px 0;
-    }
+.ad-slot.bottom {
+  margin-top: 30px;
+  border-top: 1px solid #eeeeee;
+}
 
-    .cover span { font-size: 10px; }
+/* ANNOUNCEMENT BAR */
 
-    .benefits {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin: 24px 0;
-      text-align: left;
-    }
+.announcement {
+  background: var(--gold);
+  color: var(--navy);
+  padding: 9px 12px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 
-    .benefit {
-      background: white;
-      border: 1px solid #e6e9f4;
-      border-radius: 14px;
-      padding: 15px 13px;
-      font-size: 14px;
-    }
+/* HERO SECTION */
 
-    .benefit b {
-      display: block;
-      margin-bottom: 5px;
-      color: #3346b5;
-    }
+.hero {
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      #293c66 0%,
+      #182443 43%,
+      #10172c 100%
+    );
+  color: white;
+  padding: 50px 20px 55px;
+  text-align: center;
+  overflow: hidden;
+}
 
-    .cta {
-      display: inline-block;
-      margin-top: 22px;
-      background: #ffcf62;
-      color: #18213a;
-      padding: 14px 24px;
-      border-radius: 10px;
-      font-weight: 800;
-      text-decoration: none;
-      box-shadow: 0 5px 0 #dba73f;
-      transition: transform .2s, background .2s;
-    }
+.hero-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
 
-    .cta:hover {
-      background: #ffdc82;
-      transform: translateY(-2px);
-    }
+.eyebrow {
+  display: inline-block;
+  padding: 7px 14px;
+  border: 1px solid rgba(255,209,102,.5);
+  background: rgba(255,209,102,.09);
+  color: var(--gold);
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
 
-    .note {
-      margin-top: 14px !important;
-      font-size: 12px !important;
-      color: #dce1ff !important;
-    }
+.hero h1 {
+  max-width: 700px;
+  margin: 23px auto 15px;
+  font-size: clamp(34px, 7vw, 54px);
+  line-height: 1.08;
+  letter-spacing: -1.7px;
+}
 
-    footer {
-      text-align: center;
-      color: #8189a0;
-      font-size: 12px;
-      padding: 0 16px 22px;
-    }
+.hero h1 span {
+  color: var(--gold);
+}
 
-    @media (max-width: 560px) {
-      .container { padding: 22px 14px; }
-      .hero { padding: 30px 18px; }
-      .benefits { grid-template-columns: 1fr; }
-      .ad-slot { min-height: 90px; }
-    }
-  </style>
+.hero-description {
+  max-width: 560px;
+  margin: 0 auto;
+  color: #d8deed;
+  font-size: 16px;
+  line-height: 1.8;
+}
 
-  <!-- Adsterra Social Bar -->
-  <script src="https://pl31746431.profitableratecpmnetwork.com/f6/25/68/f62568ffc2bb0a7287f8ecd2fb0bf7a3.js"></script>
+/* 3D EBOOK */
+
+.book-stage {
+  perspective: 1100px;
+  width: 100%;
+  margin: 36px auto 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 25px;
+}
+
+.book {
+  position: relative;
+  width: 225px;
+  height: 300px;
+  transform-style: preserve-3d;
+  transform: rotateY(-18deg) rotateX(3deg);
+  transition: transform .4s ease;
+  filter: drop-shadow(18px 22px 13px rgba(0,0,0,.28));
+}
+
+.book:hover {
+  transform: rotateY(-8deg) rotateX(1deg) translateY(-5px);
+}
+
+.book-cover {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 25px 17px 18px;
+  background:
+    linear-gradient(145deg, #fff0bb 0%, #ffd166 42%, #f0ae38 100%);
+  color: #14213a;
+  border: 1px solid rgba(255,255,255,.5);
+  box-shadow:
+    inset 7px 0 10px rgba(255,255,255,.28),
+    inset -5px 0 10px rgba(110,63,0,.12);
+}
+
+.book-cover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 2px;
+  height: 100%;
+  background: rgba(255,255,255,.55);
+}
+
+.book-cover::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(24,33,58,.19);
+  pointer-events: none;
+}
+
+.book-kicker {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
+
+.book-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 29px;
+  line-height: 1.02;
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-top: 31px;
+}
+
+.book-divider {
+  width: 55px;
+  height: 3px;
+  background: #14213a;
+  margin: 19px auto 14px;
+}
+
+.book-subtitle {
+  max-width: 160px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.book-bottom {
+  margin-top: auto;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* BOOK SPINE */
+
+.book-spine {
+  position: absolute;
+  left: -23px;
+  top: 0;
+  width: 24px;
+  height: 300px;
+  background: linear-gradient(
+    90deg,
+    #9b6922,
+    #e4ae47 35%,
+    #b27c28 100%
+  );
+  transform-origin: right;
+  transform: rotateY(-90deg);
+  border-right: 1px solid rgba(0,0,0,.25);
+}
+
+/* BOOK PAGES */
+
+.book-pages {
+  position: absolute;
+  top: 5px;
+  right: -10px;
+  width: 11px;
+  height: 289px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #fffdf6 0px,
+    #fffdf6 3px,
+    #e8dfcc 4px,
+    #fffdf6 5px
+  );
+  transform: translateZ(-2px);
+}
+
+/* PRICE AND CTA DIRECTLY UNDER BOOK */
+
+.purchase-card {
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 23px 20px 22px;
+  background: #ffffff;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.19);
+}
+
+.offer-label {
+  color: #65708b;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.price-row {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 10px;
+  margin: 4px 0 14px;
+}
+
+.price {
+  font-size: 45px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 1.25;
+  color: var(--navy);
+}
+
+.price-note {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 58px;
+  padding: 15px 16px;
+  border-radius: 11px;
+  background: var(--gold);
+  color: #151c30;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.4;
+  box-shadow: 0 5px 0 var(--gold-dark);
+  transition: transform .2s, background .2s;
+}
+
+.cta:hover {
+  background: #ffe09a;
+  transform: translateY(-2px);
+}
+
+.cta:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 var(--gold-dark);
+}
+
+.secure-note {
+  color: #68728a;
+  font-size: 11px;
+  margin-top: 15px;
+}
+
+.hero-note {
+  margin-top: 21px;
+  font-size: 12px;
+  color: #d1d8e9;
+}
+
+/* GENERAL SECTIONS */
+
+.section {
+  padding: 65px 20px;
+}
+
+.section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-heading {
+  max-width: 650px;
+  text-align: center;
+  margin: 0 auto 35px;
+}
+
+.section-heading h2 {
+  font-size: clamp(28px, 5vw, 39px);
+  line-height: 1.18;
+  letter-spacing: -1px;
+  margin-bottom: 14px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.section-tag {
+  display: inline-block;
+  color: #76530e;
+  background: #fff1c8;
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+/* PAIN POINTS */
+
+.pain-section {
+  background: #ffffff;
+}
+
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.pain-card {
+  border: 1px solid #e7eaf0;
+  border-radius: 14px;
+  padding: 20px;
+  background: #ffffff;
+}
+
+.pain-icon {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.pain-card h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.pain-card p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* BENEFITS */
+
+.benefits-section {
+  background: #f6f8fc;
+}
+
+.benefit-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.benefit-card {
+  background: white;
+  border: 1px solid #e6eaf2;
+  border-radius: 15px;
+  padding: 23px;
+}
+
+.benefit-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background: #e5f6ed;
+  color: #197653;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.benefit-card h3 {
+  font-size: 17px;
+  margin-bottom: 7px;
+}
+
+.benefit-card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* 30-DAY PLAN */
+
+.plan-section {
+  background: var(--navy);
+  color: white;
+}
+
+.plan-section .section-heading p {
+  color: #c8d0e3;
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.plan-card {
+  padding: 24px 19px;
+  border-radius: 14px;
+  background: #1c2947;
+  border: 1px solid #344363;
+}
+
+.plan-number {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.plan-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.plan-card p {
+  font-size: 13px;
+  color: #cbd3e5;
+}
+
+/* WHO IT'S FOR */
+
+.audience-section {
+  background: white;
+}
+
+.audience-box {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 28px;
+  border-radius: 18px;
+  background: #fffaf0;
+  border: 1px solid #f3e6c7;
+}
+
+.audience-list {
+  list-style: none;
+}
+
+.audience-list li {
+  position: relative;
+  padding-left: 29px;
+  margin: 13px 0;
+  font-size: 14px;
+}
+
+.audience-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-weight: 900;
+  font-size: 17px;
+}
+
+/* FAQ */
+
+.faq-section {
+  background: #f6f8fc;
+}
+
+.faq-list {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+details {
+  background: white;
+  border: 1px solid #e5e9f1;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  padding: 18px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+details p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+/* FINAL OFFER */
+
+.final-section {
+  background: linear-gradient(135deg, #182443, #10172c);
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+.final-section h2 {
+  max-width: 620px;
+  margin: 0 auto 15px;
+  font-size: clamp(29px, 6vw, 43px);
+  line-height: 1.15;
+}
+
+.final-section p {
+  max-width: 540px;
+  margin: 0 auto 23px;
+  color: #d0d7e8;
+  font-size: 15px;
+}
+
+.final-section .purchase-card {
+  color: var(--text);
+}
+
+/* FOOTER */
+
+footer {
+  padding: 25px 15px;
+  background: #0b1020;
+  color: #aeb8cf;
+  text-align: center;
+  font-size: 11px;
+}
+
+footer a {
+  color: #e4c16b;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 38px 17px 43px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .book {
+    width: 205px;
+    height: 275px;
+  }
+
+  .book-spine {
+    height: 275px;
+  }
+
+  .book-pages {
+    height: 264px;
+  }
+
+  .book-title {
+    font-size: 26px;
+    margin-top: 25px;
+  }
+
+  .section {
+    padding: 48px 17px;
+  }
+
+  .pain-grid,
+  .benefit-list {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .purchase-card {
+    padding: 21px 16px;
+  }
+
+  .price {
+    font-size: 42px;
+  }
+
+  .cta {
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+
+<!-- Adsterra Social Bar -->
+<script src="https://pl31746431.profitableratecpmnetwork.com/f6/25/68/f62568ffc2bb0a7287f8ecd2fb0bf7a3.js"></script>
 
 </head>
 
 <body>
 
-  <!-- TOP ADSTERRA BANNER -->
-  <div class="ad-slot" aria-label="Advertisement">
-    <script>
-      atOptions = {
-        'key': '810ed210883875a4d69a768ce8b1c946',
-        'format': 'iframe',
-        'height': 60,
-        'width': 468,
-        'params': {}
-      };
-    </script>
-    <script src="https://www.highrevenueformat.com/810ed210883875a4d69a768ce8b1c946/invoke.js"></script>
-  </div>
+<!-- TOP ADVERTISEMENT -->
+<div class="ad-slot" aria-label="Advertisement">
+  <script>
+    atOptions = {
+      'key': '810ed210883875a4d69a768ce8b1c946',
+      'format': 'iframe',
+      'height': 60,
+      'width': 468,
+      'params': {}
+    };
+  </script>
+  <script src="https://www.highrevenueformat.com/810ed210883875a4d69a768ce8b1c946/invoke.js"></script>
+</div>
 
-  <main class="container">
-    <section class="hero">
+<div class="announcement">
+  Your next 30 days can look different
+</div>
 
-      <span class="badge">Your 30-Day Reset Starts Here</span>
+<!-- HERO -->
+<main>
 
-      <div class="cover" aria-label="The Discipline Blueprint ebook cover">
-        <small>THE PRACTICAL GUIDE</small>
-        <strong>THE<br>DISCIPLINE<br>BLUEPRINT</strong>
-        <span>Stop delaying. Start moving.</span>
+<section class="hero">
+  <div class="hero-inner">
+
+    <span class="eyebrow">
+      The 30-Day Self-Discipline Blueprint
+    </span>
+
+    <h1>
+      Stop Waiting for Motivation.<br>
+      <span>Start Taking Control.</span>
+    </h1>
+
+    <p class="hero-description">
+      Learn how to overcome procrastination, build better habits,
+      and take consistent action—even on days when you don't feel motivated.
+    </p>
+
+    <!-- 3D EBOOK IMAGE -->
+    <div class="book-stage">
+      <div class="book">
+
+        <div class="book-spine"></div>
+        <div class="book-pages"></div>
+
+        <div class="book-cover">
+          <div class="book-kicker">THE PRACTICAL GUIDE</div>
+
+          <div class="book-title">
+            THE<br>
+            DISCIPLINE<br>
+            BLUEPRINT
+          </div>
+
+          <div class="book-divider"></div>
+
+          <div class="book-subtitle">
+            STOP PROCRASTINATING.<br>
+            BUILD BETTER HABITS.<br>
+            TAKE CONSISTENT ACTION.
+          </div>
+
+          <div class="book-bottom">
+            YOUR 30-DAY RESET STARTS HERE
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PRICE AND CTA DIRECTLY BELOW THE EBOOK -->
+    <div class="purchase-card">
+
+      <div class="offer-label">
+        Get Your Copy Today
       </div>
 
-      <h1>Stop Procrastinating.<br>Start Taking Control.</h1>
-
-      <p>
-        Build better habits, stay consistent, and finally make progress
-        on the goals that matter—with a practical guide you can start
-        using today.
-      </p>
-
-      <div class="benefits">
-        <div class="benefit">
-          <b>✓ Beat procrastination</b>
-          Learn simple ways to get started when you feel stuck.
-        </div>
-
-        <div class="benefit">
-          <b>✓ Build consistency</b>
-          Create routines that work even when motivation fades.
-        </div>
-
-        <div class="benefit">
-          <b>✓ Follow a 30-day plan</b>
-          Turn small daily actions into lasting progress.
-        </div>
+      <div class="price-row">
+        <span class="price">$9.99</span>
       </div>
 
-      <!-- REPLACE THE URL BELOW WITH YOUR ACTUAL EBOOK URL -->
       <a
-class="cta"
-href="https://destinylight8.gumroad.com/l/httpspepeosasgithubioStop-procrastinating-"
-target="_blank"
-rel="noopener noreferrer"
-
-«»
-
-Get The Discipline Blueprint →
-        </a>
+        class="cta"
+        href="YOUR_GUMROAD_CHECKOUT_URL"
       >
         Get The Discipline Blueprint →
       </a>
 
-      <p class="note">
-        Practical steps. Simple exercises. Progress one day at a time.
+      <p class="secure-note">
+        Digital ebook · $9.99 one-time payment
       </p>
 
-    </section>
-  </main>
+    </div>
 
-  <!-- BOTTOM ADSTERRA BANNER -->
-  <div class="ad-slot bottom" aria-label="Advertisement">
-    <script>
-      atOptions = {
-        'key': '810ed210883875a4d69a768ce8b1c946',
-        'format': 'iframe',
-        'height': 60,
-        'width': 468,
-        'params': {}
-      };
-    </script>
-    <script src="https://www.highrevenueformat.com/810ed210883875a4d69a768ce8b1c946/invoke.js"></script>
+    <p class="hero-note">
+      A practical starting point for building more consistent habits.
+    </p>
+
   </div>
+</section>
 
-  <footer>
-    © 2026 The Discipline Blueprint
-  </footer>
+<!-- THE PROBLEM -->
+<section class="section pain-section">
+  <div class="section-inner">
 
-  <script>
-(function () {
-  let seconds = 20;
+    <div class="section-heading">
+      <span class="section-tag">Sound Familiar?</span>
 
-  const countdown = document.getElementById("countdown");
-  const loadingScreen = document.getElementById("loading-screen");
+      <h2>You Know What You Need to Do. So Why Is It So Hard to Start?</h2>
 
-  const timer = setInterval(function () {
-    seconds--;
-    countdown.textContent = seconds;
+      <p>
+        Knowing what to do and actually doing it are two different things.
+        Procrastination can keep you stuck in a frustrating cycle.
+      </p>
+    </div>
 
-    if (seconds <= 0) {
-      clearInterval(timer);
-      loadingScreen.style.display = "none";
-    }
-  }, 1000);
-})();
-        </script>
+    <div class="pain-grid">
 
-</body>
-  </html>
+      <div class="pain-card">
+        <div class="pain-icon">⏳</div>
+        <h3>You Keep Putting Things Off</h3>
+        <p>
+          You plan to start today, but somehow the important tasks
+          get pushed to tomorrow.
+        </p>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-icon">🔄</div>
+        <h3>You Struggle to Stay Consistent</h3>
+        <p>
+          You start with enthusiasm, but your routine becomes difficult
+          to maintain after a few days.
+        </p>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-icon">🎯</div>
+        <h3>Your Goals Feel Far Away</h3>
+        <p>
+          You have plans and ambitions, but you struggle to turn
+          them into daily progress.
+        </p>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-icon">🧠</div>
+        <h3>You Wait to Feel Motivated</h3>
+        <p>
+          You find yourself waiting for the right mood instead
+          of building a reliable way to get started.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="section benefits-section">
+  <div class="section-inner">
+
+    <div class="section-heading">
+      <span class="section-tag">Inside the Blueprint</span>
+
+      <h2>A Practical Approach to Becoming More Consistent</h2>
+
+      <p>
+        The goal isn't to become perfect overnight.
+        It's to make meaningful progress through manageable daily actions.
+      </p>
+    </div>
+
+    <div class="benefit-list">
+
+      <div class="benefit-card">
+        <div class="benefit-check">✓</div>
+        <h3>Understand Your Procrastination</h3>
+        <p>
+          Identify common patterns that make it difficult to begin
+          and learn practical ways to respond.
+        </p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-check">✓</div>
+        <h3>Build Better Daily Habits</h3>
+        <p>
+          Use manageable routines to make productive actions
+          easier to repeat.
+        </p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-check">✓</div>
+        <h3>Take Action Without Waiting for Motivation</h3>
+        <p>
+          Learn to break tasks into smaller steps and get started
+          even when a task feels overwhelming.
+        </p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-check">✓</div>
+        <h3>Follow a 30-Day Structure</h3>
+        <p>
+          Give yourself a practical framework for working on consistency
+          one day at a time.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 30-DAY PLAN -->
+<section class="section plan-section">
+  <div class="section-inner">
+
+    <div class="section-heading">
+      <span class="section-tag">Your Roadmap</span>
+
+      <h2>One Month. Small Steps. A More Intentional Routine.</h2>
+
+      <p>
+        Use the 30-day framework to approach your goals with
+        greater structure and consistency.
+      </p>
+    </div>
+
+    <div class="plan-grid">
+
+      <div class="plan-card">
+        <span class="plan-number">DAYS 01–10</span>
+        <h3>Build Awareness</h3>
+        <p>
+          Recognize your procrastination patterns, clarify priorities,
+          and begin breaking tasks into manageable actions.
+        </p>
+      </div>
+
+      <div class="plan-card">
+        <span class="plan-number">DAYS 11–20</span>
+        <h3>Build Consistency</h3>
+        <p>
+          Practice useful routines, reduce unnecessary distractions,
+          and make steady action part of your schedule.
+        </p>
+      </div>
+
+      <div class="plan-card">
+        <span class="plan-number">DAYS 21–30</span>
+        <h3>Strengthen Your Routine</h3>
+        <p>
+          Review your progress, adjust your approach,
+          and identify habits you want to continue.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- WHO IT IS FOR -->
+<section class="section audience-section">
+  <div class="section-inner">
+
+    <div class="section-heading">
+      <span class="section-tag">Is This for You?</span>
+      <h2>A Useful Starting Point If You're Ready to Make a Change</h2>
+    </div>
+
+    <div class="audience-box">
+
+      <ul class="audience-list">
+        <li>You have goals but struggle to take consistent action.</li>
+        <li>You want to reduce procrastination and manage your time better.</li>
+        <li>You want to establish more useful daily habits.</li>
+        <li>You prefer a structured plan instead of vague advice.</li>
+        <li>You're ready to work on gradual, sustainable improvement.</li>
+      </ul>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq-section">
+  <div class="section-inner">
+
+    <div class="section-heading">
+      <span class="section-tag">Frequently Asked Questions</span>
+      <h2>Before You Get Started</h2>
+    </div>
+
+    <div class="faq-list">
+
+      <details>
+        <summary>What is The Discipline Blueprint?</summary>
+        <p>
+          It is a practical digital guide designed to help readers
+          work on self-discipline, procrastination, and consistent habits
+          using a 30-day framework.
+        </p>
+      </details>
+
+      <details>
+        <summary>How much does it cost?</summary>
+        <p>
+          The listed price is $9.99 as a one-time payment.
+          Check the checkout page for the final amount and any applicable taxes.
+        </p>
+      </details>
+
+      <details>
+        <summary>Is this a physical book?</summary>
+        <p>
+          No. This offer is for a digital ebook.
+          No physical book will be shipped.
+        </p>
+      </details>
+
+      <details>
+        <summary>Will this guarantee that I stop procrastinating?</summary>
+        <p>
+          No guide can guarantee a particular result.
+          The blueprint is intended to provide practical ideas and structure
+          that you can apply to your own routine.
+        </p>
+      </details>
+
+      <details>
+        <summary>How do I get the ebook?</summary>
+        <p>
+          Tap the purchase button to visit the checkout page.
+          Follow the payment provider's instructions to complete your purchase
+          and access the ebook.
+        </p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-section">
+  <div class="section-inner">
+
+    <h2>Stop Putting Your Progress Off Until Tomorrow.</h2>
+
+    <p>
+      Start building a more consistent routine with
+      The Dis
