@@ -6,10 +6,66 @@
   <title>The Discipline Blueprint</title>
   <meta name="description" content="A practical guide to building self-discipline, overcoming procrastination, and taking consistent action.">
 
+  /* Loading Screen */
+#loading-screen {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #18213a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 999999;
+  font-family: Arial, sans-serif;
+}
+
+#loading-screen h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+#loading-screen p {
+  font-size: 16px;
+  color: #e9ecff;
+}
+
+.loader {
+  width: 45px;
+  height: 45px;
+  border: 5px solid #465078;
+  border-top: 5px solid #ffcf62;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+#loading-screen .countdown {
+  color: #ffcf62;
+  font-size: 24px;
+  font-weight: bold;
+}
   <style>
     * { box-sizing: border-box; }
-
+    
     body {
+      
+      <div id="loading-screen">
+  <div class="loader"></div>
+  <h2>Please wait...</h2>
+  <p>Your Discipline Blueprint is getting ready.</p>
+  <p>Preparing your experience</p>
+  <div class="countdown">
+    <span id="countdown">20</span> seconds
+  </div>
+</div>
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: #18213a;
@@ -260,6 +316,25 @@ Get The Discipline Blueprint →
   <footer>
     © 2026 The Discipline Blueprint
   </footer>
+
+  <script>
+(function () {
+  let seconds = 20;
+
+  const countdown = document.getElementById("countdown");
+  const loadingScreen = document.getElementById("loading-screen");
+
+  const timer = setInterval(function () {
+    seconds--;
+    countdown.textContent = seconds;
+
+    if (seconds <= 0) {
+      clearInterval(timer);
+      loadingScreen.style.display = "none";
+    }
+  }, 1000);
+})();
+        </script>
 
 </body>
   </html>
